@@ -1,0 +1,69 @@
+| Car |
+| --- |
+| + maxSpeed: int
+# colour: string
+- engineSize: int |
+| + getMaxSpeed(): int
++ setMaxSpeed(int)
++ getColour(): string
++ setColour(string)
++ getEngineSize(): int
++ setEngineSize(int) |
+1. Human Class Diagram
+
+| Human |
+| --- |
+| + name: string
+# age: int
+- gender: bool |
+| getName(): string
+setName(string)
+getAge(): int
+setAge(int):
+getGender(): bool
+setGender(bool) |
+1. Animal Class Diagram
+
+| Animal |
+| --- |
+| + breed: string
+# amountOfLegs: int
+- weight: int |
+| getBreed(): string
+setBreed(string)
+getAmountOfLegs(): int
+setAmountOfLegs(int)
+getWeight(): int
+setWeight(int) |
+1. Book
+
+| Book |
+| --- |
+| pageNumbers: int
+author: string
+category: string |
+| getPageNumbers(): int
+setPageNumbers(int)
+getAuthor(): string
+setAuthor(string)
+getCategory(): string
+setCategory(string) |
+1. Online Product
+
+| OnlineProduct |
+| --- |
+| price: float
+deliveryTime: date
+shippingFee: float
+insurancePolicy: bool
+stockQuantity: int |
+| getPrice(): float
+setPrice(float)
+getDeliveryTime(): date
+setDeliveryTime(date)
+getShippingFee(): float
+setShippingFee(float)
+getInsurancePolicy(): bool
+getInsurancePolicy(bool)
+getStockQuantity(): int
+setStockQuantity(int) |

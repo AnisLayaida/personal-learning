@@ -1,0 +1,26 @@
+# Fortune Cookie
+# Task: Define the fortune function, with a random integer method and a bunch of if statements to create the fortune cookie game
+
+import random
+
+def fortune():
+    random_fortune = random.randint(0, 7)
+
+    if random_fortune == 0:
+        print("Don't pursue happiness – create it.")
+    elif random_fortune == 1:
+        print("All things are difficult before they are easy.")
+    elif random_fortune == 2:
+        print("The early bird gets the worm, but the second mouse gets the cheese.")
+    elif random_fortune == 3:
+        print("Someone in your life needs a letter from you.")
+    elif random_fortune == 4:
+        print("Don't just think. Act!")
+    elif random_fortune == 5:
+        print("Your heart will skip a beat.")
+    elif random_fortune == 6:
+        print("The fortune you search for is in another cookie.")
+    elif random_fortune == 7:
+        print("Help! I'm being held prisoner in a Chinese bakery!")
+
+fortune()
