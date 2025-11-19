@@ -1,3 +1,6 @@
-# personal-learning
-# personal-learning
-# personal-learning
+## Personal Learning:
+- OOP Principles
+- FastAPI
+- Pydantic
+- Uvicorn
+- OO Designs
