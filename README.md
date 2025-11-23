@@ -1,22 +1,22 @@
  <br/><br/> <strong>A curated collection of my engineering work, learning journey, and real-world projects.</strong> <br/> <em>Software Engineering • AI & ML • Cloud • Cybersecurity • Databases • Networks</em>
 
 # 📁 Repository Categories:
-## **AI & Machine Learning Projects**
+## **AI & Machine Learning**
 - https://www.kaggle.com/
 - https://n8n.io/
-## **Cloud Projects**
+## **Cloud Engineering**
 - https://learn.nextwork.org/portfolio
-## **Cybersecurity Projects**
+## **Cybersecurity**
 - https://github.com/Z4nzu/hackingtool
 - https://app.hackthebox.com/home
 - https://killercoda.com/
 - https://kodekloud.com/
-## **Data & Databases Projects**
+## **Data & Databases**
 - https://datalemur.com/
 - https://algomap.io/roadmap?
-## **Network Projects**
+## **Network Engineering**
 - https://www.netacad.com/
-## **Software Projects** 
+## **Software Development** 
 - https://leetcode.com/problemset/
 ### Useful repos and tools used:
 - https://github.com/public-apis/public-apis
