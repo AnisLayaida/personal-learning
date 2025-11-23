@@ -2,9 +2,9 @@
 
 ## 📁 Repository Categories:
 **AI & Machine Learning Projects** </b>
-- **Cloud Projects**
-- **Cybersecurity Projects**
-- **Database Projects**
-- **Network Projects**
+**Cloud Projects** </b>
+**Cybersecurity Projects** </b>
+**Database Projects** </b>
+**Network Projects** </b>
 - https://github.com/Z4nzu/hackingtool
-- **Software Projects**
+**Software Projects** </b>
