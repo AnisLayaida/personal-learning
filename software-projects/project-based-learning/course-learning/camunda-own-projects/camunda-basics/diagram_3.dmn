@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="risk_rating_dmn" name="Risk Rating" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.38.1" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.7.0">
+  <decision id="risk_rating_table" name="Risk Rating">
+    <allowedAnswers></allowedAnswers>
+    <informationRequirement id="InformationRequirement_19rf9nd">
+      <requiredInput href="#InputData_19gobdt" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_14a9fph">
+      <requiredInput href="#InputData_1t7q25f" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0nzk0ob">
+      <requiredInput href="#InputData_0sg0evf" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1rhvtfe" hitPolicy="FIRST">
+      <input id="InputClause_176xqqa" label="Age">
+        <inputExpression id="LiteralExpression_0guxjf7" typeRef="number">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0kip8we" label="Car Make">
+        <inputExpression id="LiteralExpression_07en406" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_07fvapf" label="Car Model">
+        <inputExpression id="LiteralExpression_03qq4uk" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_1swmiuq" label="Risk Level" typeRef="string" />
+      <output id="OutputClause_1v02n4v" label="Region" typeRef="string" />
+      <output id="OutputClause_14n1q4a" typeRef="string" />
+      <rule id="DecisionRule_03szupj">
+        <description></description>
+        <inputEntry id="UnaryTests_01y21i0">
+          <text>&lt;= 25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16s3zhb">
+          <text>"Porsche"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c92ku7">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05x6kus">
+          <text>"Red"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ilw7ky">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0qmeg6f">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0iyz5ls">
+        <inputEntry id="UnaryTests_0sri3h9">
+          <text>&lt;= 21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1m5d5fj">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_149m1nd">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1iz7i64">
+          <text>"Yellow"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0f1mcxy">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b367e2">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0b7a4qb">
+        <inputEntry id="UnaryTests_1f5hfo0">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0a4daav">
+          <text>"Porsche"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01xdxqv">
+          <text>"911"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_09hm8cd">
+          <text>"Yellow"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_13pip0z">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mxthtn">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uhzns8">
+        <description></description>
+        <inputEntry id="UnaryTests_1un81ae">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0we8mup">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ivwuk1">
+          <text>"X3"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10kh1gp">
+          <text>"Yellow"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0yigz8h">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1blt0sf">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0g8057a">
+        <inputEntry id="UnaryTests_1k0yuif">
+          <text>&lt;= 30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ofzwzx">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hufeqb">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mgojs8">
+          <text>"Yellow"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y5wqj2">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_07nz4o2">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lowp7d">
+        <inputEntry id="UnaryTests_04k1hk8">
+          <text>&gt; 25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14o73gn">
+          <text>"Porsche"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ihfmz1">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ss7jcr">
+          <text>"Green"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1xnh8v7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_004isr0">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_09ty9ij">
+        <inputEntry id="UnaryTests_0ckwhbe">
+          <text>&gt; 30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1dpgove">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1hb528o">
+          <text>"318i","525i","735i"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ce4chc">
+          <text>"Green"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uko3f7">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rhmm7v">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_099oj0u">
+        <inputEntry id="UnaryTests_0m0ohw9">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g8tjce">
+          <text>"Audi"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09km1xh">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1v9pyz6">
+          <text>"Green"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1v54zl4">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xw934d">
+          <text></text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1380g26">
+        <inputEntry id="UnaryTests_1u2spps">
+          <text>-</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00988r3">
+          <text>"Volkswagen"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gi2ney">
+          <text>-</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1tloc1v">
+          <text>"Green"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1lk58gn">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_160yhi2">
+          <text></text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1t7q25f" name="Car Make" />
+  <inputData id="InputData_0sg0evf" name="Car Model" />
+  <inputData id="InputData_19gobdt" name="Age" />
+  <decision id="Decision_0c0c1f4" name="Premiums">
+    <informationRequirement id="InformationRequirement_1vfj8ef">
+      <requiredDecision href="#risk_rating_table" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0sgflxk">
+      <requiredInput href="#InputData_1d3txdo" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_1on98k9">
+      <input id="InputClause_1xgw7me" label="Risk Ratings">
+        <inputExpression id="LiteralExpression_1v5ed1s" typeRef="string" />
+      </input>
+      <output id="OutputClause_1njn82s" label="Region" typeRef="string" />
+      <output id="OutputClause_0h2n4ui" label="Premium" typeRef="number" biodi:width="192" />
+      <rule id="DecisionRule_0dgc9f6">
+        <inputEntry id="UnaryTests_0tjcs03">
+          <text>"Green"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_057ds9v">
+          <text>"Region 1"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0y4lnt3">
+          <text>0</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wyh0u5">
+        <inputEntry id="UnaryTests_1chjebg">
+          <text>"Green"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y71rn3">
+          <text>"Region 2"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14qy5h0">
+          <text>5</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0kikz80">
+        <inputEntry id="UnaryTests_01fr86s">
+          <text>"Green"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_03dgdc5">
+          <text>"Region 3"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r38d62">
+          <text>7</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0t28n9g">
+        <inputEntry id="UnaryTests_1maovlx">
+          <text>"Yellow"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vsb96b">
+          <text>"Region 1"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1ywz2sb">
+          <text>15</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bgcee4">
+        <inputEntry id="UnaryTests_0ubcpqj">
+          <text>"Yellow"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_10to918">
+          <text>"Region 2", "Region 3"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1epqeg5">
+          <text>20</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="Decision_0yel8vk" name="Staff Assigned">
+    <informationRequirement id="InformationRequirement_094mvz3">
+      <requiredDecision href="#risk_rating_table" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_13bm5y9">
+      <requiredInput href="#InputData_1d3txdo" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_05x08ka">
+      <input id="InputClause_1nfhk96" label="Risk Rating">
+        <inputExpression id="LiteralExpression_08avyo1" typeRef="string" />
+      </input>
+      <input id="InputClause_1f7su8u" label="Region">
+        <inputExpression id="LiteralExpression_0p7w0p2" typeRef="string">
+          <text></text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_01m5tfc" label="Staff Assigned" typeRef="string" />
+      <rule id="DecisionRule_04v4xqy">
+        <inputEntry id="UnaryTests_0e62v6a">
+          <text>"Yellow"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0bepuqi">
+          <text>"Region 3"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_049wvw1">
+          <text>"Sarah Neumann"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iic8w5">
+        <inputEntry id="UnaryTests_0wgc0m4">
+          <text>"Yellow"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e19kh8">
+          <text>"Region 2"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1o4gu60">
+          <text>"Peter Schubert"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1x8n7s1">
+        <inputEntry id="UnaryTests_09a462m">
+          <text>"Yellow"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nf3kie">
+          <text>"Region 1"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qapjfb">
+          <text>"Sabine Peters"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1d3txdo" name="Region" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape id="DMNShape_1na6pfj" dmnElementRef="risk_rating_table">
+        <dc:Bounds height="80" width="180" x="360" y="640" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0n8glqi" dmnElementRef="InputData_1t7q25f">
+        <dc:Bounds height="45" width="125" x="547" y="857" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1ms998q" dmnElementRef="InputData_0sg0evf">
+        <dc:Bounds height="45" width="125" x="387" y="857" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_052gvob" dmnElementRef="InputData_19gobdt">
+        <dc:Bounds height="45" width="125" x="227" y="857" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1aptskt" dmnElementRef="InformationRequirement_19rf9nd">
+        <di:waypoint x="290" y="857" />
+        <di:waypoint x="405" y="740" />
+        <di:waypoint x="405" y="720" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_17rw655" dmnElementRef="InformationRequirement_14a9fph">
+        <di:waypoint x="610" y="857" />
+        <di:waypoint x="495" y="740" />
+        <di:waypoint x="495" y="720" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0u415nb" dmnElementRef="InformationRequirement_0nzk0ob">
+        <di:waypoint x="450" y="857" />
+        <di:waypoint x="450" y="740" />
+        <di:waypoint x="450" y="720" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_067zpru" dmnElementRef="Decision_0c0c1f4">
+        <dc:Bounds height="80" width="180" x="160" y="240" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_0pywo9u" dmnElementRef="Decision_0yel8vk">
+        <dc:Bounds height="80" width="180" x="540" y="240" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1wmes39" dmnElementRef="InformationRequirement_094mvz3">
+        <di:waypoint x="450" y="640" />
+        <di:waypoint x="630" y="340" />
+        <di:waypoint x="630" y="320" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_14ketai" dmnElementRef="InputData_1d3txdo">
+        <dc:Bounds height="45" width="125" x="377" y="77" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1vh8ab3" dmnElementRef="InformationRequirement_1vfj8ef">
+        <di:waypoint x="450" y="640" />
+        <di:waypoint x="250" y="340" />
+        <di:waypoint x="250" y="320" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_0fgi0vr" dmnElementRef="InformationRequirement_0sgflxk">
+        <di:waypoint x="440" y="122" />
+        <di:waypoint x="250" y="220" />
+        <di:waypoint x="250" y="240" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="DMNEdge_01jynx5" dmnElementRef="InformationRequirement_13bm5y9">
+        <di:waypoint x="440" y="122" />
+        <di:waypoint x="630" y="220" />
+        <di:waypoint x="630" y="240" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

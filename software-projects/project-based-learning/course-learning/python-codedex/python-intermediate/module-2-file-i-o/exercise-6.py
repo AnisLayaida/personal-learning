@@ -8,6 +8,7 @@
 # open() method is your gateway to handle files in python
 # It can create (if it doesnt exist) or open (if it exists)
 
+# file = open(file_name, mode)
 file = open('example.txt', 'w') # Opens example file for writing
 
 file.write("Hello World!!") # The write() method allows you to write in the file
