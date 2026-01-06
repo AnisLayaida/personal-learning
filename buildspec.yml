@@ -1,24 +1,22 @@
-version: 0.2
+version: 0.3
 
 phases:
-  install:
-    runtime-versions:
-      java: corretto8
   pre_build:
     commands:
-      - echo Logging in to AWS CodeArtifact...
-      - CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain nextwork-devops --domain-owner 809704584433 --region eu-west-2 --query authorizationToken --output text`
-      - export CODEARTIFACT_AUTH_TOKEN
+      - echo "PRE_BUILD OK"
+
   build:
     commands:
-      - echo Build started on `date`
-      - mvn clean install -s settings.xml
+      - echo "Entering Maven project directory"
+      - cd personal-learning/cloud-projects/nextwork-projects/7-day-devops-series
+      - ls
+      - mvn clean install -s ../../settings.xml
+
   post_build:
     commands:
-      - echo Build completed on `date`
-      - echo Packaging artifacts...
-      - mvn package -s settings.xml
+      - echo "Packaging"
+      - mvn package -s ../../settings.xml
+
 artifacts:
   files:
-    - target/*.war
-  discard-paths: no
+    - personal-learning/cloud-projects/nextwork-projects/7-day-devops-series/target/**/*.jar
