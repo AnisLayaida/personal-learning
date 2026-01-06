@@ -1,22 +1,18 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      java: corretto17
     commands:
-      - echo "PRE_BUILD OK"
+      - export MAVEN_HOME=/opt/apache-maven-3.5.2
+      - export PATH=$MAVEN_HOME/bin:$PATH
+      - mvn -version
 
   build:
     commands:
-      - echo "Entering Maven project directory"
-      - cd personal-learning/cloud-projects/nextwork-projects/7-day-devops-series
-      - ls
-      - mvn clean install -s ../../settings.xml
-
-  post_build:
-    commands:
-      - echo "Packaging"
-      - mvn package -s ../../settings.xml
+      - mvn clean package -s settings.xml
 
 artifacts:
   files:
-    - personal-learning/cloud-projects/nextwork-projects/7-day-devops-series/target/**/*.jar
+    - target/*.war
